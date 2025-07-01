@@ -1,0 +1,185 @@
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e8d1e7;
+    color: #333;
+    line-height: 1.6; 
+}
+
+.contacto-container {
+    max-width: 1000px;     
+    margin: 0 auto;
+    padding: 30px; 
+}
+
+/* Encabezado */
+.contacto-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contacto-header h1 {
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.contacto-header h1 i {
+    color: #3498db;
+    margin-right: 10px;
+}
+
+.contacto-header p {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Contenido principal */
+.contacto-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+@media (max-width: 768px) {
+    .contacto-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Información de contacto */
+.contacto-info {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.info-item i {
+    font-size: 1.5rem;
+    color: #3498db;
+    margin-right: 15px;
+    margin-top: 5px;
+}
+
+.info-item h3 {
+    color: #2c3e50;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.info-item p {
+    color: #7f8c8d;
+    margin: 0;
+}
+
+/* Formulario */
+.contactoform {
+    background: #ffffff;
+    padding: 30px;  /* Espaciado interno */
+    border-radius: 15px; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05); /* Sombra de caja */
+}
+
+.contactoform h2 {
+    color: #2c3e50; /* Color del título */
+    margin-bottom: 25px; /* Ajusta el espacio inferior */
+    font-size: 1.5rem; /* Ajusta el tamaño de la fuente */
+}
+
+.form-grupo {
+    margin-bottom: 20px; 
+}
+
+.form-grupo input,
+.form-grupo textarea {
+    width: 90%; /* Ancho completo */
+    padding: 12px 15px; /* Espaciado interno */
+    border: 1px solid #ddd; /* Borde gris claro */
+    border-radius: 4px; /* Bordes redondeados */
+    font-size: 1rem; /* Ajusta el tamaño de la fuente */
+    transition: border-color 0.3s; 
+}
+
+.form-grupo input:focus,
+.form-grupo textarea:focus {
+    border-color: #3498db;
+    outline: none; 
+}
+
+.form-grupo textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: inline-flex;
+    align-items: center;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+button i {
+    margin-left: 8px;
+}
+
+.pie2 {
+    background-color: #000000; /* Color de fondo del footer */
+    padding: 20px 0; /* Espaciado interno */
+    color: #ffffff;     /* Color del texto del footer */
+    border-top: 1px solid #000000; /* Línea superior */
+}
+
+.piecontenido2 {
+    max-width: 1200px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centrar contenido */
+    text-align: center; /* Centrar texto */
+    padding: 0 15px; /* Espaciado interno */
+}
+
+/* Estilos para redes sociales */
+.redes {
+    display: flex; /* Flexbox para alinear elementos */
+    justify-content: center; /* Centrar horizontalmente */
+    gap: 20px; /* Espacio entre elementos */
+    margin-top: 15px; /* Espacio superior */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en móviles */
+}
+
+.red-item {
+    display: flex; /* Flexbox para alinear elementos */
+    align-items: center; /* Centrar verticalmente */
+    gap: 8px; /* Espacio entre elementos */
+}
+
+.icono {
+    width: 20px; /* Ajusta según necesidad */
+    height: auto; /* Mantiene la proporción */
+}
+
+/* Responsive para móviles */
+@media (max-width: 600px) { /* Ajusta según necesidad */
+    .redes { /* Ajusta el diseño para móviles */
+        flex-direction: column; /* Coloca los elementos en columna */
+        gap: 10px; /* Espacio entre elementos */
+    }
+}

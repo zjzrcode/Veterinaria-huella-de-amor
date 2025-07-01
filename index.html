@@ -4,13 +4,190 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>replit</title>
+  <title>Inicio - Veterinaria huella de amor</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-  Hello world
-  <script src="script.js"></script>
+  <header class="header">
+      <div class="logo">
+        <img src="nav/a.png" alt="Logo" width="20%">
+      </div>
+
+      <!-- Checkbox oculto para controlar el menú en móviles -->
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+      <label for="menu-toggle" class="menu-button">☰</label>
+
+      <!-- Menú de navegación -->
+      <nav class="menu">
+          <ul>
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="servicios.html">Servicios</a></li>
+              <li><a href="Nosotros.html"">Nosotros</a></li>
+              <li><a href="Contactanos.html">Contáctanos</a></li>
+              <li><a href="Galeria.html">Galería</a></li>
+              <li><a href="Adopcion.html">Adopción</a></li>
+          </ul>
+      </nav>
+  </header>
+
+  <div class="videotexto">
+    <!-- Video con atributos móvil-->
+    <video autoplay muted loop playsinline webkit-playsinline> 
+      <source src="inicio/manchas62.mp4" type="video/mp4">
+      <!-- Fallback para navegadores antiguos -->
+      Tu navegador no soporta videos.
+    </video>
+
+    <!-- Contenido de texto -->
+    <div class="videotextocontenido">
+      <h1>Veterinaria Huellas de Amor</h1>
+      <strong>
+        <p>Somos una organización dedicada a la protección y bienestar de los animales.</p>
+        <p>Ofrecemos servicios de adopción, esterilización, vacunación y más. De patitas a patitas los cuidamos a todos.</p>
+      </strong>
+    </div>
+  </div>
+
+
+<section class="main">     
+    <br>
+    <!--Sección de tips-->
+    <section id="tips">
+    <section class="tipsmascotas">
+      <div class="contenedortips">
+        <h2>Tips para cuidar a tu mascota</h2>
+        <p>Descubre consejos prácticos para garantizar el bienestar de tu compañero peludo. ¡Pequeños gestos hacen grandes diferencias!</p>
+          <button onclick="window.open('https://www.expertoanimal.com/', '_blank')" class="boton">Ver todos los tips</button>
+      </div>
+      <div class="videotips">
+      <video class="video"  width="400" controls autoplay loop muted poster="portada.jpg">
+          <source src="inicio/video.mp4" type="video/mp4">
+          <source src="inicio/video.webm" type="video/webm">
+          Tu navegador no es compatible con videos.
+      </video>
+      </div>
+    </section>
+
+  </section>
+    <br>
+    <!--Sección de testimonios-->
+    <section class="testimonios">
+      <h2 class="titulotestimonio">Testimonios</h2>
+      <div class="testimonio-container">
+        <!-- Testimonio 1 (Imagen izquierda) -->
+        <div class="testimonio-item">
+          <img src="inicio/timoo.jpeg" alt="Foto de Timo">
+          <div class="testimonio-text">
+            <p><strong>🐶 Timo:</strong> “Llevamos a Timo por una infección en la oreja y lo atendieron con muchísimo cuidado. Es un perro muy mimoso y se portó genial durante toda la consulta. ¡Gracias por la paciencia y el cariño con él!”<br>  <strong><em>Nadia Martinez</strong></em></p>
+          </div>
+        </div>
+
+        <!-- Testimonio 2 (Imagen derecha) -->
+        <div class="testimonio-item">
+          <div class="testimonio-text">
+            <p><strong>🐶 Manchas:</strong> “Manchas tenía dolor de panza y en la veterinaria lo diagnosticaron rapidísimo. Siempre fue muy protectora con nosotros, y ver cómo la trataron con respeto nos tranquilizó un montón. ¡Ya está como nueva!”.<br><em><strong>Micaela Fidalgo</strong></em></p>
+          </div>
+          <img src="inicio/manchas.jpeg" alt="Foto de Manchas">
+        </div>
+
+        <!-- Testimonio 3 (Imagen izquierda) -->
+        <div class="testimonio-item">
+          <img src="inicio/nala.jpeg" alt="Foto de Nala">
+          <div class="testimonio-text">
+            <p>🐱<strong>Lío:</strong> “Lío tuvo una conjuntivitis leve y nos atendieron súper rápido. Aunque es algo desconfiado, se dejó revisar sin problema gracias a la calma del equipo. Es un gato muy inteligente y sensible.”<br><em><strong>Valentino Bustos</strong></em></p>
+          </div>
+        </div>
+
+        <!-- Testimonio 4 (Imagen derecha) -->
+        <div class="testimonio-item">
+          <div class="testimonio-text">
+            <p>🐶<strong> Floppy:</strong> “Floppy fue por una revisión de rutina. Es muy tranquila y observadora, y la veterinaria la trató con muchísima dulzura. ¡Nos encanta traerla acá porque se nota el amor por los animales!”<br><em><strong>Gianluca Francos</strong></em></p>
+          </div>
+          <img src="inicio/pichu.jpeg" alt="Foto de Pichu">
+        </div>
+      </div>
+    </section>
+    <br>
+    <!--Sección de beneficios-->
+    <section class="beneficiosclinica">
+     <div class="contenedorbeneficios">
+      <h2>Beneficios exclusivos por ser parte de nuestra clínica</h2>
+
+      <ul class="listabeneficios">
+        <li>✔️ Descuentos especiales en consultas</li>
+        <li>✔️ Vacunación gratuita anual</li>
+        <li>✔️ Prioridad en emergencias</li>
+        <li>✔️ Acceso a talleres educativos</li>
+      </ul>
+
+      <button onclick="window.location.href='Nosotros.html'" class="botonbeneficios">
+        Conoce todos los beneficios
+      </button>
+     </div>
+   </section>
+    <!--Sección de estadísticas-->
+    <section id="exp"">
+        <div class="estadisticas">
+          <div class="estadisticaitem">
+            <img src="inicio/exp2.png" alt="Años de experiencia" class="iconoestadistica">
+            <div class="numero">30</div>
+            <div class="descripcion">AÑOS DE EXPERIENCIA</div>
+          </div>
+
+          <div class="estadisticaitem">
+            <img src="inicio/gat.png" alt="Pacientes contentos" class="iconoestadistica">
+            <div class="numero">1,078,344</div>
+            <div class="descripcion">PACIENTES CONTENTOS</div>
+          </div>
+
+          <div class="estadisticaitem">
+            <img src="inicio/pin.png" alt="Cirugías exitosas" class="iconoestadistica">
+            <div class="numero">110,098</div>
+            <div class="descripcion">CIRUGÍAS EXITOSAS</div>
+          </div>
+        </div>
+  </section>
+    <br>
+    <!--Sección de nosotros-->
+    <section class="acerca">
+       <h2 class="titulotestimonio">Un poco de nosotros</h2>
+        <div class="testimonio-container">
+          <div class="testimonio-item">
+            <img src="inicio/asd.png" alt="Foto de la clínica">
+            <div class="testimonio-text">
+            <p>
+              Con más de 30 años de experiencia en el campo veterinario, nos destacamos como referentes en el cuidado de las mascotas. En nuestra clínica, el compromiso con la salud y el bienestar animal es primordial. Contamos con  más de 25 especialidades médicas,  que abarcan desde medicina interna y cirugía hasta dermatología y oftalmología. Nuestro equipo está compuesto por más de  50 profesionales altamente calificados,  todos enfocados en brindar el máximo cuidado posible a su mascota.</p>
+            </div>
+         </div>
+        </div>
+        <button onclick="window.location.href='Contactanos.html'" class="boton">Contactanos</button>
+      <button onclick="window.location.href='Turno.html'" class="boton2">Sacar Turno</button>
+      <br>
+      <br>
+      <button onclick="window.location.href='Nosotros.html'" class="boton2">Mas de nosotros</button>
+      
+    </section>
+    <br>
+  
+<footer class="pie">
+        <div class="piecontenido">
+            <p>© 2025 Veterinarias Huellas de Amor. Todos los derechos reservados.</p>
+            <p>info@huellasdeamor.com</p>
+            <p>Mitre 1412, Villa Mercedes, Argentina</p>
+            <div class="redes">
+                <div class="red-item">
+                    <img src="footer/cel.png" alt="Teléfono" class="icono"> 
+                    <span>2657-203120</span>
+                    <img src="footer/meta.png" alt="Facebook" class="icono"> 
+                    <span>@huellasdeamor</span>
+                    <img src="footer/ig.png" alt="Instagram" class="icono"> 
+                    <span>@huellasdeamor</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</section>
 </body>
 
 </html>

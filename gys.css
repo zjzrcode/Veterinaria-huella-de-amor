@@ -1,0 +1,283 @@
+body{
+  background-color: #e8d1e7;
+}
+/* Diseño responsivo (móvil) */
+@media (max-width: 768px) {
+    .menu-button {
+        display: block;
+    }
+
+    .menu {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #731f84;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: clip-path 0.3s ease;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    /* Mostrar/ocultar menú al hacer clic */
+    .menu-toggle:checked ~ .menu {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+.main2 {
+  min-height: 100vh;  /* Asegura que ocupe al menos el 100% de la altura de la ventana */
+  padding: 4rem 2rem; /* Espaciado interno */
+  flex: 1;            /* Ocupa todo el espacio disponible */
+  display: flex;      /* Flexbox para centrar contenido */ 
+  flex-direction: column; /* Coloca los elementos en columna */
+  justify-content: center; /* Centrar verticalmente */
+  align-items: center; /* Centrar horizontalmente */
+}
+/* Estilos para el contenedor de imágenes */
+.cajas {
+  display: flex; /*Flexbox para alinear elementos */
+  width: 500px; 
+  height: 330px; 
+  border-radius: 10px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);  
+  align-items: center; /* Centrar verticalmente */
+  justify-content: center;
+  padding: 10px;
+  gap: 5px; /* Espaciado entre imágenes */
+  background-color: #d99bd9; 
+  
+}
+/* Estilo para cada imagen */
+.cajas img {
+  width: 0px;
+  height: 200px;
+  flex-grow: 1; /* Permite que la imagen crezca para llenar el espacio disponible */
+  object-fit: cover; /* Ajusta la imagen al tamaño de la caja */
+  opacity: .8; 
+  transition: .5s ease; /* Transición para efectos */
+}
+/* Efecto al pasar el mouse */
+.cajas img:hover { 
+    cursor: crosshair; 
+    width: 150px;
+    height: 250px;
+    opacity: 1;
+    filter: contrast(120%); /* Aumenta el contraste */
+  }
+.titulo-galeria {
+  text-align: center;
+  font-size: 24px;
+  font-family: sans-serif;
+  color: #ffa600;
+}
+.descripcion-galeria {
+  text-align: center;
+  font-size: 18px;
+  font-family: Roboto;
+  color: #a348a3;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);  
+  border-radius: 10px; 
+  width: 700px;
+  border: 2px solid #a0038e;
+}
+.descripcion-galeria:hover {
+  background-color: #a0038e; 
+  color: white; 
+} 
+h4 {
+  text-align: center;
+  font-size: 24px;
+  font-family: sans-serif;
+  color: #810881;
+}
+
+.boton2 {
+  background-color: transparent; /* Fondo transparente */
+  color: #007B9E; 
+  padding: 10px 20px;
+  border: 2px solid #007B9E; 
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s; /* Transición para todos los efectos */
+}
+
+.boton2:hover {
+  background-color: #007B9E; /* Fondo al pasar el mouse */
+  color: white; /* Texto blanco al hacer hover */
+}
+
+.pie3 {
+  background-color: #000000; /* Color de fondo del footer */
+  padding: 20px 0; /* Espaciado interno */
+  color: #ffffff;     /* Color del texto del footer */
+  border-top: 1px solid #000000; /* Línea superior */
+}
+
+.piecontenido3 {
+  max-width: 1200px; /* Ancho máximo del contenido */
+  margin: 0 auto; /* Centrar contenido */
+  text-align: center; /* Centrar texto */
+  padding: 0 15px; /* Espaciado interno */
+}
+
+/* Estilos para redes sociales */
+.redes {
+  display: flex; /* Flexbox para alinear elementos */
+  justify-content: center; /* Centrar horizontalmente */
+  gap: 20px; /* Espacio entre elementos */
+  margin-top: 15px; /* Espacio superior */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan en móviles */
+}
+
+.red-item {
+  display: flex; /* Flexbox para alinear elementos */
+  align-items: center; /* Centrar verticalmente */
+  gap: 8px; /* Espacio entre elementos */
+}
+
+.icono {
+  width: 20px; /* Ajusta según necesidad */
+  height: auto; /* Mantiene la proporción */
+}
+
+/* Responsive para móviles */
+@media (max-width: 600px) { /* Ajusta según necesidad */
+  .redes { /* Ajusta el diseño para móviles */
+      flex-direction: column; /* Coloca los elementos en columna */
+      gap: 10px; /* Espacio entre elementos */
+  }
+}
+
+
+.contenedor4 {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  margin: 20px auto;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+} /* Estilos para el contenedor */
+
+.titulo2 {
+  text-align: center;
+  margin: 0 0 15px 0;
+  color: #333;
+} /* Estilos para el título */
+
+.aviso {
+  background: #fff3cd;
+  padding: 10px;
+  text-align: center;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  color: #856404;
+} 
+
+.subida {
+  margin-bottom: 15px; /* Espacio entre elementos */
+  text-align: center;
+} 
+
+input[type="file"] {
+  display: none; /* Oculta el input de archivo */
+}
+
+label {
+  display: block; /* Muestra el label como bloque */
+  padding: 10px;
+  background: #e9ecef;
+  border-radius: 15px;
+  cursor: pointer;
+  border: 1px solid #ced4da;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+button:hover { 
+  background: #0069d9;
+}
+
+.login {
+  text-align: center;
+  margin-top: 15px;
+  color: #666;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none; /* Sin subrayado */
+}
+
+a:hover {
+  text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+/* Sección de servicios */
+/* Tarjetas con efecto */
+.tarjeta-contenedor {
+  width: 100%;
+  max-width: 1110px;
+  display: flex;
+}
+.tarjeta-estilo {
+  width: 100%;
+  margin: 20px; 
+  border-radius: 6px;
+  overflow: hidden; 
+  background: #d695c7;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+  cursor: default; 
+  transition: all 400ms ease; 
+}
+.tarjeta-estilo:hover {
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+  transform: translateY(-3%); 
+}
+.tarjeta-estilo p {
+  padding: 15px;
+  font-size: 20px;
+  text-align: center;
+  
+}
+.titulo1 {
+  color: #bb0c69;
+  text-align: center;
+  font-size: 40px;
+  font-family: sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.servicios-contenedor h3 {
+  color: #bb0c69;
+  text-align: center;
+  font-size: 30px;
+  font-family: sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.servicios-contenedor img {
+  display: block; 
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  opacity: 0.8;
+  width: 500px;
+  height: 300px;
+}
+.ortopedia img {
+  width: 400px;
+  height: 400px;
+}
+.servicios-contenedor p {
+  text-align: center;
+  color: #1C0D02;
+}

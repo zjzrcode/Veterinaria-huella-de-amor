@@ -2,3 +2,429 @@ html {
   height: 100%;
   width: 100%;
 }
+
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #e8d1e7;
+}
+
+.header {
+    background: #731f84; /* Color de fondo del encabezado */
+    color: white; /* Color del texto del encabezado */
+    padding: 1rem;   /* Espaciado interno */
+    display: flex;   /* Flexbox para alinear elementos */
+    justify-content: space-between; /* Espacio entre elementos */
+    align-items: center; /* Centrar verticalmente */
+    position: relative; /* Necesario para que funcione z-index */
+    z-index: 1000; /* Asegura que el header esté por encima del video */
+}
+
+/* Ocultar checkbox */
+.menu-toggle {
+    display: none; /* Oculta el checkbox */
+}
+
+/* Estilo del botón hamburguesa (solo móvil) */
+.menu-button {
+    display: none;  
+    cursor: pointer; 
+    font-size: 1.5rem; 
+}
+
+/* Estilos del menú (escritorio) */
+.menu ul {
+    list-style: none;   
+    margin: 0; 
+    padding: 0; 
+    display: flex; 
+    gap: 1rem;  
+}
+
+.menu li a {
+    color: #ffffff; /* Color del texto del enlace */
+    text-decoration: none; /* Sin subrayado */
+    padding: 0.5rem 1rem; /* Espaciado interno */
+}
+
+.menu li a:hover {
+    background: #450552; /* Color de fondo al pasar el mouse */
+    border-radius: 30px; /* Bordes redondeados */
+}
+
+/* Diseño responsivo (móvil) */
+@media (max-width: 768px) {
+    .menu-button {
+        display: block; 
+    }
+
+    .menu {
+        position: absolute; 
+        top: 60px; 
+        left: 0; 
+        width: 100%;
+        background: #731f84;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); 
+        transition: clip-path 0.3s ease;
+        z-index: 1001;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    /* Mostrar/ocultar menú al hacer clic */
+    .menu-toggle:checked ~ .menu {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+.videotexto {
+  position: relative;
+  height: 400px;
+  overflow: hidden; /* Asegura que el video no se desborde 
+  border-radius: 0px 0px 20px 20px;*/
+  border-radius: 20px;
+  margin-top: 10px;
+  /* Imagen de respaldo por si el video no carga (opcional) 
+  background: url('manchas6.jpg') center/cover;*/
+}
+
+.videotexto video {
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que el video cubra todo el contenedor */
+  z-index: -1;  
+}
+
+.videotextocontenido {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* Alinea el texto a la izquierda */
+  text-align: left; /* Alinea el texto a la izquierda */
+  color: white;
+  text-shadow: 3px 2px 2px rgba(0, 0, 0, 0.5); /* Sombra para mejor legibilidad */
+  padding: 20px; /* Espaciado interno */
+  height: 100%; /* Asegura que el contenedor ocupe todo el alto del video */
+}
+
+/* Estilos generales */
+.tipsmascotas {
+  background-color: #f0f7ff;
+  border-radius: 20px;
+  padding: 50px 20px; /
+}
+
+.contenedortips {
+  max-width: 1200px; /* Ancho máximo del contenedor */
+  margin: 0 auto; 
+  display: flex; /* Flexbox para alinear texto y video */
+  align-items: center; /* Centra verticalmente */
+  gap: 40px; /* Espacio entre texto y video */
+}
+
+/* Estilos del texto */
+.textotips {
+  flex: 1; /* Ocupa el espacio disponible */
+}
+
+.tipsmascotas h2 {
+  color: #2c3e50;
+  font-size: 2rem;
+  margin-bottom: 15px; 
+}
+
+.tipsmascotas p {
+  color: #000000;
+  font-size: 1.1rem;
+  line-height: 1.6; 
+  margin-bottom: 20px; 
+}
+
+/* Estilos del video */
+.videotips {
+  flex: 1; /* Ocupa el mismo espacio que el texto */
+}
+
+.videotips video {
+  width: 50%; /* Video responsive */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Responsive: Apilar en móviles */
+@media (max-width: 768px) {
+  .contenedortips {
+    flex-direction: column; /* Texto arriba, video abajo */
+  }
+
+  .videotips video {
+    width: 100%;
+    max-width: 400px; /* Limita el ancho en móviles */
+  }
+}
+
+.video{
+    border-radius: 10px;
+    border: 2px solid #521f5c;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin: 0 auto;  /* Centra el video horizontalmente */
+    display: block;  /* Asegura que el video ocupe todo el ancho disponible */
+}
+
+.estadisticas {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px; /* Más espacio entre items */
+  padding: 60px 20px;
+  background-color: #af7ead;
+    border-radius: 20px;
+  text-align: center;
+}
+
+.estadisticaitem {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra todo verticalmente */
+}
+
+.iconoestadistica {
+  width: 120px; /* Ajusta el tamaño de la imagen */
+  height: 120px;
+  margin-bottom: 15px; /* Espacio entre ícono y número */
+  object-fit: contain; /* Evita distorsión de la imagen */
+}
+
+.numero {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+.descripcion {
+  font-size: 1.2rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.testimonios { /* Estilo para el contenedor de testimonios */
+  background: #af7ead; /* Color de fondo */
+  color: white; /* Color del texto */
+  text-align: center; /* Centrar texto */
+  border-radius: 30px; /* Bordes redondeados */
+  padding: 20px; /* Espaciado interno */
+  margin: 20px auto; /* Margen superior e inferior */
+  max-width: 900px; /* Ancho máximo */
+}
+
+.titulotestimonio { /* Estilo para el título de testimonios */
+  background: #521f5c; /* Color de fondo */
+  color: white; /* Color del texto */
+  text-align: center; /* Centrar texto */
+  border-radius: 30px; /* Bordes redondeados */
+  font-size: 24px; /* Tamaño de fuente */
+  font-weight: bold; /* Negrita */
+  padding: 10px; /* Espaciado interno */
+  margin: 0 auto 20px;  /* Margen inferior */    
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para mejor legibilidad */
+  max-width: 300px; /* Ancho máximo */
+}
+
+.testimonio-container { /* Estilo para el contenedor de testimonios */
+  display: flex; /* Flexbox para alinear elementos */ 
+  flex-direction: column; /* Coloca los elementos en columna */
+  gap: 30px; /* Espacio entre elementos */
+  padding: 15px; /* Espaciado interno */
+}
+
+.testimonio-item { /* Estilo para cada testimonio */
+  display: flex; /* Flexbox para alinear elementos */
+  align-items: center; /* Centrar verticalmente */
+  gap: 20px; /* Espacio entre elementos */
+}
+
+.testimonio-item img { /* Estilo para la imagen del testimonio */
+  width: 200px; /* Ancho de la imagen */
+  height: 200px; /* Altura de la imagen */
+  object-fit: cover; /* Ajusta la imagen al tamaño del contenedor */
+  border-radius: 15px; /* Bordes redondeados */
+  border: 3px solid #521f5c; /* Borde alrededor de la imagen */
+}
+
+.testimonio-text { /* Estilo para el texto del testimonio */
+  flex: 1; /* Ocupa todo el espacio disponible */
+  text-align: left; /* Alinea el texto a la izquierda */
+  padding: 10px; /* Espaciado interno */
+  margin: 0; /* Elimina el margen predeterminado */
+  line-height: 1.5; /* Espaciado entre líneas */
+}
+
+.beneficiosclinica {
+  background-color: #f0f7ff;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+.contenedorbeneficios {
+  padding: 20px;
+}
+
+.listabeneficios {
+  text-align: left;
+  display: inline-block;
+  margin: 25px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.listabeneficios li {
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+  color: #2c3e50;
+  position: relative;
+  padding-left: 30px;
+}
+
+.listabeneficios li:before {
+  content: "✔️";
+  position: absolute;
+  left: 0;
+  color: #27ae60;
+}
+
+.botonbeneficios {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 15px; /* Espacio superior */
+}
+
+.botonbeneficios:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.acerca{
+    background: #f0f7ff; /* Color de fondo */
+    color: black; /* Color del texto */
+    text-align: center; /* Centrar texto */
+    border-radius: 30px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    margin: 20px auto; /* Margen superior e inferior */
+    max-width: 900px; /* Ancho máximo */
+}
+
+.boton{
+  background-color: #008CBA; /* Color azul */
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+  transition: all 0.3s;
+}
+
+.boton:hover {
+  background-color: #007B9E; /* Color más oscuro al pasar el mouse */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+}
+
+.boton2 {
+  background-color: transparent; /* Fondo transparente */
+  color: #007B9E; /* Color del texto */
+  padding: 10px 20px;
+  border: 2px solid #007B9E; /* Borde sólido */
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s; /* Transición para todos los efectos */
+}
+
+.boton2:hover {
+  background-color: #007B9E; /* Fondo al pasar el mouse */
+  color: white; /* Texto blanco al hacer hover */
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  .testimonio-item {
+    flex-direction: column;
+  }
+
+  .testimonio-item img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .testimonio-text {
+    text-align: center;
+  }
+}
+
+/* Estilos generales del footer */
+.pie {
+    background-color: #000000; /* Color de fondo del footer */
+    padding: 20px 0; /* Espaciado interno */
+    color: #ffffff;     /* Color del texto del footer */
+    border-top: 1px solid #000000; /* Línea superior */
+}
+
+.piecontenido {
+    max-width: 1200px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centrar contenido */
+    text-align: center; /* Centrar texto */
+    padding: 0 15px; /* Espaciado interno */
+}
+
+
+/* Estilos para redes sociales */
+.redes {
+    display: flex; /* Flexbox para alinear elementos */
+    justify-content: center; /* Centrar horizontalmente */
+    gap: 20px; /* Espacio entre elementos */
+    margin-top: 15px; /* Espacio superior */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en móviles */
+}
+
+.red-item {
+    display: flex; /* Flexbox para alinear elementos */
+    align-items: center; /* Centrar verticalmente */
+    gap: 8px; /* Espacio entre elementos */
+}
+
+.icono {
+    width: 20px; /* Ajusta según necesidad */
+    height: auto; /* Mantiene la proporción */
+}
+
+/* Responsive para móviles */
+@media (max-width: 600px) { /* Ajusta según necesidad */
+    .redes { /* Ajusta el diseño para móviles */
+        flex-direction: column; /* Coloca los elementos en columna */
+        gap: 10px; /* Espacio entre elementos */
+    }
+}
